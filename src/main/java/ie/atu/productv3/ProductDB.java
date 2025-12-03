@@ -6,6 +6,8 @@ public class ProductDB {
        Book  myBook = null;
        Product  myProduct = null;
        Software mySoftware = null;
+       Music myMusic = null;
+       TV myTV = null;
         if (productCode.equalsIgnoreCase("java")) {
             myBook = new Book();
             myBook.setCode(productCode);
@@ -55,6 +57,26 @@ public class ProductDB {
                 mySoftware.setVersion("Oracle 3.0");
                 myProduct = mySoftware;
             }
+        if (productCode.equalsIgnoreCase("PINK")) {
+            myMusic = new Music();
+            myMusic.setCode(productCode);
+            myMusic.setDescription("Wish you were here ");
+            myMusic.setArtist("Pink Floyd");
+            myMusic.setLabel("Columbia group");
+            myMusic.setPrice(8.00);
+
+            myProduct = myMusic;
+        }
+        if (productCode.equalsIgnoreCase("kdl43")) {
+            myTV = new TV();
+            myTV.setCode(productCode);
+            myTV.setDescription("SONY BRAVIA SMART TV KDL43WF663");
+            myTV.setManufacture("Sony");
+            myTV.setScreen_size("55");
+            myTV.setPrice(819.00);
+            myProduct = myTV;
+        }
+
         return myProduct;
     }
 }
