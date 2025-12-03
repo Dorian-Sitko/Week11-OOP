@@ -1,15 +1,7 @@
 package ie.atu.productv3;
-
-
-
-
-public class ProductDB
-{
-
+public class ProductDB {
 
     public static Product getProduct(String productCode) {
-
-
 
        Book  myBook = null;
        Product  myProduct = null;
@@ -37,6 +29,7 @@ public class ProductDB
             myBook.setPrice(54.50);
             myBook.setAuthor("Jim Lennon");
             myProduct = myBook;
+        }
 
             if (productCode.equalsIgnoreCase("studios")) {
                 mySoftware = new Software();
@@ -44,7 +37,7 @@ public class ProductDB
                 mySoftware.setDescription("Visual Studios");
                 mySoftware.setPrice(57.50);
                 mySoftware.setVersion("Microsoft 1.1");
-                mySoftware = mySoftware;
+                myProduct = mySoftware;
 
             } else if (productCode.equalsIgnoreCase("eclipse")) {
                 mySoftware = new Software();
@@ -52,7 +45,7 @@ public class ProductDB
                 mySoftware.setDescription("Build Java apps");
                 mySoftware.setPrice(57.50);
                 mySoftware.setVersion("Eclipse Neon");
-                mySoftware = mySoftware;
+                myProduct = mySoftware;
 
             } else if (productCode.equalsIgnoreCase("oracle")) {
                 mySoftware = new Software();
@@ -62,9 +55,6 @@ public class ProductDB
                 mySoftware.setVersion("Oracle 3.0");
                 myProduct = mySoftware;
             }
-
-
-        }
         return myProduct;
     }
 }
